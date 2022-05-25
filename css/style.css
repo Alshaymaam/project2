@@ -1,0 +1,403 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    font-family: sans-serif;
+    height: 3000px;
+}
+header{
+    padding: 40px 0px;
+}
+.container{
+    width: 90%;
+    margin: auto;
+    
+}
+.hcontent{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.hcontent nav {
+    flex: 5;
+    text-align: center;
+}
+.hlist{
+    list-style: none;  
+}
+.hcontent img{
+    flex:1;
+    max-width: 150px;
+}
+.hcontent ul li{
+    display: inline-block;
+}
+.hcontent ul li a{
+    color:rgb(122, 82, 69);
+    text-decoration: none;
+}
+.hlink{
+    position: relative;
+    display: block;
+    font-weight: bold;
+    padding: 10px 20px;
+}
+.hlink::before,.hlink::after{
+    content: " ";
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-style:solid ;
+    transition: 0.5s;
+}
+.hlink::before{
+    border-width: 0px 2px;
+    height: 100%;
+    width: 95%;
+    transform: scale3d(1,0,1);
+    transform-origin: left;
+}
+.hlink::after{
+    border-width: 2px 0px;
+    height: 91%;
+    width: 98%;
+    transform: scale3d(0,1,1);
+}
+.hlink:hover:before,.hlink:hover::after{
+    transform: scale3d(1,1,1);
+}
+.D1{
+    text-align: right;
+    flex: 1;
+}
+.D1 .hlist li{
+    padding: 10px;
+    font-weight: bold;
+}
+.hlist .icon{
+    position: relative;
+    margin-right: 10px;
+}
+.hlist .icon::after{
+    position: absolute;
+    content: "0";
+    border-radius: 50%;
+    background-color: rgb(123, 82, 68);
+    color:rgb(255, 255, 255);
+    padding:4px;
+    font-size: 13px;
+    bottom: -4px;
+}
+.list{
+    position: relative;
+}
+.menu{
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    border: 2px solid rgb(123, 82, 68);
+    width: 400px;
+    padding: 15px;
+    margin-top: 5px;
+    background-color: white;
+    transform: scale(0);
+    transition: 0.5s;
+    line-height: 1.5;
+}
+.list:hover .menu{
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+
+}
+.menu ul{
+    display: table-cell;
+    text-align: left;
+}
+.first{
+    display: block;
+    margin-bottom: 10px;
+    border-bottom: 1px dotted rgb(123, 82, 68);
+}
+/* ------------------------------------------------------------------- */
+.Fsec img{
+    width: 100%;
+}
+/* -------------------------------------------------------------------- */
+.category{
+padding:60px;
+}
+.category .container{
+    margin: 0px 55px;
+}
+
+.Hhead{
+    text-align: center;
+    margin-bottom: 25px;
+}
+.title{
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+.Hhead .line{
+    display: block;
+    width: 100px;
+    background-color: rgb(123, 82, 68);
+    height: 2px;
+    margin: auto;
+    transition: 0.5s;
+}
+.Hhead:hover .line{
+    width: 150px;
+}
+.items{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap:10px;
+    margin: auto;
+}
+.items img{
+    width:250px;
+    height:250px;
+    margin-bottom: 25px;
+}
+.item{
+    position: relative;
+}
+.item .icon{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: brown;
+    color: white;
+    text-align: center;
+    line-height:30px;
+    display: block;
+    bottom: 0;
+    right: 0;
+    transition: 0.2s;
+    visibility: hidden;
+    opacity: 0;
+   margin-left:30px;
+}
+.item:hover .icon{
+    visibility: visible;
+    opacity: 1;
+}
+.Tit{
+    color: gray;
+    font-weight: normal;
+}
+.T1{
+    font-size: 18px;
+}
+.Dd{
+    display: flex;
+    margin: 30px 0px;
+}
+.para{
+    position: relative;
+    padding:30px;
+    background-color: rgb(247, 243, 239);
+    min-width:525px;
+}
+.para .Di{
+    position: relative;
+    padding-left: 40px;
+    margin-bottom: 20px;
+}
+.para .Di .icon{
+    position: absolute;
+    top:0;
+    left: 0;
+    color: rgb(123, 82, 68);
+    font-size: 50px;
+}
+.des{
+    line-height:2;
+}
+.Di h2, .Di span{
+    margin-left: 15px;
+
+}
+.Ditem{
+    position: relative;
+    height: 310px;
+}
+.Dinf{
+    position: absolute;
+    top: 20px;
+    left: 15px;
+}
+.Dinf h3{
+    font-weight: normal;
+    color: rgb(123, 82, 68);
+}
+.Dinf h2{
+    font-size: 20px;
+}
+.it1{
+    background-image: url(../img/13.jpg);
+    background-size: cover;
+    margin: 0px 20px;
+    transition: 0.5s;
+    min-width:245px;
+}
+.it1:hover{
+    transform: scale(1.1);
+}
+.it2{
+    background-image: url(../img/14.jpg);
+    background-size: cover;
+    transition: 0.5s;
+    min-width:245px;
+}
+.it2:hover{
+    transform: scale(1.1);
+}
+.dash{
+    position: absolute;
+    text-align: right;
+    right: 10px;
+    bottom: 20px;
+}
+.dash span{
+    background-color:rgb(123, 82, 68);
+    width: 50px;
+    height: 2px;
+    display: inline-block;
+    margin-left: 20px;
+
+}
+.Free{
+    display: flex;
+    margin-bottom: 50px;
+}
+.Fitem{
+    flex: 1;
+    text-align: center;
+    border-right: 1px solid rgb(123,82,68);
+    min-width: 210px;
+}
+.it{
+    border-right: none;
+}
+.Finfo h3{
+    font-size: 18px;
+}
+.Finfo span{
+    font-size: 16px;
+    color: gray;
+}
+.Ficon{
+    background-image: url(../img/15.png);
+    background-repeat: no-repeat;
+    height: 55px;
+}
+.ic1{
+    background-position: center 5px;
+    transition: 0.5s;
+}
+.Fitem:hover .ic1{
+    background-position: center -80px;
+}
+.ic2{
+    background-position: center -180px;
+    transition: 0.5s;
+}
+.Fitem:hover .ic2{
+    background-position: center -270px;
+}
+.ic3{
+    background-position: center -370px;
+    transition: 0.5s;
+}
+.Fitem:hover .ic3{
+    background-position: center -450px;
+}
+.ic4{
+    background-position: center -550px;
+    transition: 0.5s;
+}
+.Fitem:hover .ic4{
+    background-position: center -640px;
+}
+.ic5{
+    background-position: center -740px;
+    transition: 0.5s;
+}
+.Fitem:hover .ic5{
+    background-position: center -830px;
+}
+hr{
+   margin-left:10px;
+   width: 1035px;
+}
+/* ------------------------------------------------------------------------ */
+.product{
+    padding: 40px 10px;
+}
+.product img{
+   width: 350px;
+   height: 450px;
+}
+.plist{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+.plist li{
+    margin: 20px 20px;
+}
+.pitems{
+    display: grid;
+    grid-gap:20px;
+    margin:30px 0px;
+    grid-template-columns:repeat(3 , 1fr);
+}
+.Pitem{
+    position: relative;
+}
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.9;
+    transform: scaleX(0);
+    transition: 0.3s;
+}
+.Prlist{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.Prlist li{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    background-color: rgb(123,82,68);
+}
+.Prlist li i {
+    color: white;
+    line-height: 40px;
+}
+.Pitem:hover .overlay{
+    transform: scaleX(1);
+}
+.Pitem i.active{
+    color: yellow;
+}
+.Pinfo span{
+    display: block;
+    margin: 5px 0px;
+}
+.Pinfo i{
+    margin-top: 10px;
+}
+
+
+
